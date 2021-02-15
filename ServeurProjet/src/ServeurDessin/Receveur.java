@@ -14,6 +14,7 @@ public class Receveur extends Thread {
 	public Receveur(Socket interLocuteurClient, int nbConnexion) throws IOException {
 		this.fluxEntrant = new BufferedReader(new InputStreamReader(interLocuteurClient.getInputStream()));
 		this.noClient = nbConnexion;
+		//test
 	}
 
 	public void run() {
@@ -23,10 +24,6 @@ public class Receveur extends Thread {
 		String requete;
 		requete = this.fluxEntrant.readLine();
 		System.out.println("Le client numéro  "+this.noClient+" a envoyé " +requete);
-		
-		
-		
-		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
